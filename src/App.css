@@ -1,0 +1,153 @@
+*{
+  box-sizing: border-box;
+  --color-primary: #A1CCD1;
+  --color-secondary: #F4F2DE;
+  --color-orange: #E9B384;
+  --color-dark: #7C9D96;
+  padding: 0px;
+  margin: 0px;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.container{
+  display: flex;
+}
+
+.button{
+  color: white;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-dark);
+  min-width: 100px;
+}
+
+.input{
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+.list-item-form{
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+.button.add-new-list{
+  margin-top: 20px;
+}
+
+.menu-item{
+  padding: 10px 0px;
+  border-bottom: 1px solid var(--color-primary);
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.menu-item:hover{
+  background-color: var(--color-secondary);
+}
+
+.menu-item.active{
+  background-color: var(--color-orange);
+  color: black;
+}
+
+.list-container{
+  width: 100%;
+  height: 100vh;
+  padding: 10px 20px;
+  position: relative;
+  background-color: var(--color-primary);
+}
+
+.list-container h2{
+  color: black;
+  text-align: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid var(--color-orange);
+}
+
+.list-add-item-form{
+  display: flex;
+  width: 95%;
+  gap: 10px;
+  justify-content: space-between;
+  margin: 20px 0px;
+  position: absolute;
+  bottom: 0;
+}
+
+.list-add-item-form input{
+  width: 100%;
+  padding: 20px 20px;
+  margin: 0;
+  text-align: left;
+}
+.list-add-item-form button{
+  width: 200px;
+}
+
+.list-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--color-secondary);
+}
+
+.delete-item{
+  font-size: 20px;
+  color: #000;
+}
+
+.list-item-checkbox{
+  display: flex;
+}
+
+.list-item-checkbox input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+}
+
+.list-item-checkbox input[type='checkbox']:checked::before {
+  content: '\2714';
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 2px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.list-item-checkbox input[type='checkbox']:checked {
+  background-color: #007acc;
+  border-color: #007acc;
+}
